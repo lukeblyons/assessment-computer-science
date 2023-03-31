@@ -1,0 +1,75 @@
+Results for the extraLargeArray
+insert 765.138041 ms
+append 1.857375 ms
+
+
+|------------------|-----------------|-----------------|
+|    Array Size    | Insert Time (ms)| Append Time (ms)|
+|------------------|-----------------|-----------------|
+| tinyArray        | 19.417 μs       | 58.084 μs       |
+|------------------|-----------------|-----------------|
+| smallArray       | 8.875 μs        | 9.041 μs        |
+|------------------|-----------------|-----------------|
+| mediumArray      | 122.416 μs      | 33.916 μs       |
+|------------------|-----------------|-----------------|
+| largeArray       | 8.121 ms        | 322.875 μs      |
+|------------------|-----------------|-----------------|
+| extraLargeArray  | 764.5145 ms     | 1.860333 ms     |
+|------------------|-----------------|-----------------|
+
+
+
+We can see that both functions take longer to execute as the size of the array increases, but the doublerInsert() function usually takes longer than doublerAppend().
+
+The execution times for both functions increase as the array size increases. For example, the execution time for doublerAppend() increases from 58.084 microseconds for the tinyArray to 322.875 microseconds for the largeArray, and then jumps to 1.860333 milliseconds for the extraLargeArray.
+
+The execution time for doublerInsert() increases from 19.417 microseconds for the tinyArray to 8.121 milliseconds for the largeArray, and then jumps to 764.5145 milliseconds for the extraLargeArray.
+
+The doublerAppend() function scales better than doublerInsert() because its execution times are consistently lower than doublerInsert() for all array sizes. This is evident in the fact that the execution times for doublerInsert() increase much more rapidly as the array size increases than the execution times for doublerAppend().
+
+
+
+
+
+Results for Step 2: Write Code
+
+
+----------
+addToZero: 0.007375001907348633 ms
+false
+addToZero: 0.0028340816497802734 ms
+false
+addToZero: 0.0017910003662109375 ms
+false
+addToZero: 0.0014159679412841797 ms
+true
+----------
+hasUniqueChars: 0.006833076477050781 ms
+true
+hasUniqueChars: 0.0031249523162841797 ms
+false
+hasUniqueChars: 0.0016660690307617188 ms
+true
+hasUniqueChars: 0.0012500286102294922 ms
+true
+hasUniqueChars: 0.0010831356048583984 ms
+false
+----------
+isPangram: 0.006167173385620117 ms
+true
+isPangram: 0.0018329620361328125 ms
+false
+isPangram: 0.11162495613098145 ms
+true
+isPangram: 0.0017080307006835938 ms
+false
+----------
+findLongestWord: 0.01112508773803711 ms
+5
+findLongestWord: 0.0015828609466552734 ms
+8
+findLongestWord: 0.0012080669403076172 ms
+6
+findLongestWord: 0.0016667842864990234 ms
+4
+----------
